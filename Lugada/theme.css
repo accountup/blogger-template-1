@@ -14,8 +14,8 @@ Modified and adapted by Thanh Tran - NauStud.io
 */
 @font-face {
   font-family: 'iconfont';
-  src: url("//d1gxb22tgqvqr1.cloudfront.net/blog/fonts/icomoon.mqnq2c.eot");
-  src: url("//d1gxb22tgqvqr1.cloudfront.net/blog/fonts/icomoon.mqnq2c.eot#iefix") format("embedded-opentype"), url("//d1gxb22tgqvqr1.cloudfront.net/blog/fonts/icomoon.mqnq2c.woff") format("woff"), url("//d1gxb22tgqvqr1.cloudfront.net/blog/fonts/icomoon.mqnq2c.ttf") format("truetype"), url("//d1gxb22tgqvqr1.cloudfront.net/blog/fonts/icomoon.mqnq2c.svg#icomoon") format("svg");
+  src: url("http://d1gxb22tgqvqr1.cloudfront.net/blog/fonts/icomoon.mqnq2c.eot");
+  src: url("http://d1gxb22tgqvqr1.cloudfront.net/blog/fonts/icomoon.mqnq2c.eot#iefix") format("embedded-opentype"), url("http://d1gxb22tgqvqr1.cloudfront.net/blog/fonts/icomoon.mqnq2c.woff") format("woff"), url("http://d1gxb22tgqvqr1.cloudfront.net/blog/fonts/icomoon.mqnq2c.ttf") format("truetype"), url("http://d1gxb22tgqvqr1.cloudfront.net/blog/fonts/icomoon.mqnq2c.svg#icomoon") format("svg");
   font-weight: normal;
   font-style: normal; }
 [class^="icon-"], [class*=" icon-"] {
@@ -1186,7 +1186,10 @@ ul.children li {
 
   /* Footer widget */
   .footerarea {
-    padding: 10px 0px; } }
+    padding: 10px 0px; }
+
+  .entry-title {
+    margin: 10px 0; } }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   #topmenu ul {
     display: none; }
