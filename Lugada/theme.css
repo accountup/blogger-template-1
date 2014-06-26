@@ -10,7 +10,7 @@ License URI: license.txt
 Tags: light, white, two-columns, left-sidebar, flexible-width, microformats, custom-header, custom-menu, editor-style, featured-images, sticky-post, theme-options, threaded-comments
 
 Modified and adapted by Thanh Tran - NauStud.io
-@version 1.0
+@version 1.1
 */
 @font-face {
   font-family: 'iconfont';
@@ -137,7 +137,7 @@ body {
   margin: 0;
   font-size: 16px;
   font-weight: 300;
-  line-height: 20px; }
+  line-height: 1.5; }
 
 ::-moz-selection {
   background: #8c6b4a;
@@ -163,14 +163,14 @@ body {
    Links
    ========================================================================== */
 a {
-  color: #8c6b4a;
+  color: #ffc200;
   text-decoration: none; }
 
 a:visited {
-  color: #8c6b4a; }
+  color: #cc9b00; }
 
 a:hover {
-  color: #ffc200; }
+  text-decoration: underline; }
 
 a:focus {
   outline: thin dotted; }
@@ -569,6 +569,7 @@ img.aligncenter {
 
 .column-content {
   margin-left: 3%;
+  /* aprox 29px */
   float: right;
   min-height: 1px; }
 
@@ -615,6 +616,21 @@ img.aligncenter {
   font-size: 13px;
   color: #999999; }
 
+.nau-header .header-image {
+  display: inline-block;
+  vertical-align: top; }
+
+.nau-header .site-description {
+  border-left: 1px solid #8c6b4a;
+  color: #8c6b4a;
+  display: inline-block;
+  font-size: 20px;
+  height: 50px;
+  margin-left: 15px;
+  padding-left: 15px;
+  vertical-align: top;
+  line-height: 1; }
+
 #searchbox {
   float: right;
   margin: 25px 0 0 0; }
@@ -651,10 +667,8 @@ label.screen-reader-text {
   margin: 40px 0 20px 0; }
 
 #topmenu {
-  height: 40px;
-  border: 1px dashed #616161;
-  border-left: none;
-  border-right: none; }
+  height: 32px;
+  border-bottom: 1px solid #c3c3c3; }
 
 #topmenu ul {
   list-style: none;
@@ -665,13 +679,13 @@ label.screen-reader-text {
   float: left;
   position: relative;
   font-family: "Open Sans", sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 400;
-  letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0 30px 0 0;
   padding: 0;
-  color: #333; }
+  color: #333;
+  line-height: 32px; }
 
 #topmenu ul ul {
   display: none;
@@ -708,8 +722,7 @@ label.screen-reader-text {
 #topmenu ul li a {
   text-decoration: none;
   color: #333;
-  display: block;
-  line-height: 3.1em; }
+  display: block; }
 
 #topmenu ul li:hover > ul {
   display: block; }
@@ -734,7 +747,7 @@ label.screen-reader-text {
   margin: 0 0 20px 0; }
 
 #content {
-  margin: 15px 0;
+  margin: 14px 0;
   padding: 0 0 10px 0; }
 
 #breadcrumbs {
@@ -755,9 +768,13 @@ label.screen-reader-text {
 #breadcrumbs .current span {
   color: #8c6b4a; }
 
+.post {
+  position: relative; }
+
 .content-box {
-  border: 1px dashed #616161;
-  padding: 0px 10px 10px 10px;
+  border-left: 1px solid #eeeeee;
+  padding: 0px 4.2% 4.2% 4.2%;
+  /* aprox 29px */
   margin: 0;
   position: relative; }
 
@@ -770,25 +787,34 @@ label.screen-reader-text {
   color: #FFF;
   position: absolute;
   top: 10px;
-  left: -16px;
+  left: -40px;
   padding: 0 5px;
   height: 24px;
   line-height: 24px;
   margin-right: 10px; }
 
+/* ribbon tails */
 .entry-date:after {
   content: "";
   position: absolute;
   width: 0;
   height: 0;
-  border-top: 12px solid #ffc200;
-  border-bottom: 12px solid #ffc200;
-  border-right: 12px solid transparent;
-  left: 100%;
+  border: 12px solid #ffc200;
+  border-right-color: transparent;
+  border-left-width: 2px;
+  /* to make sure the tail is completely overlap the ribbon background */
+  right: -12px;
   top: 0; }
 
 .entry-title {
-  margin: 12px 0 10px 105px; }
+  margin: 12px 0 10px 90px; }
+
+.entry-title a {
+  color: #8c6b4a; }
+
+.entry-title a:hover {
+  color: #ffc200;
+  text-decoration: none; }
 
 .entry-author {
   float: left;
@@ -1018,7 +1044,7 @@ ul.children li {
   color: #999999; }
 
 #respond textarea {
-  border: 1px dashed #C3C3C3; }
+  border: 1px dashed #c3c3c3; }
 
 #respond .comment-form-author input[type="text"] {
   margin: 0 0 0 17px; }
@@ -1081,6 +1107,9 @@ ul.children li {
 #sidebar .widget ul li a:hover {
   color: #8c6b4a; }
 
+#sidebar .widget-content {
+  font-size: 13px; }
+
 #ArchiveList ul.flat li.archivedate {
   color: #999999;
   border-bottom: 1px solid #eeeeee;
@@ -1098,6 +1127,7 @@ ul.children li {
 
 .footerarea a {
   color: #eeeeee;
+  text-decoration: none;
   border-bottom: 1px dotted #eeeeee; }
 
 .footerarea a:hover {
@@ -1145,6 +1175,15 @@ ul.children li {
   padding: 10px 0 0 0;
   border-top: 1px dashed #ddd; }
 
+/*
+	MOBILE STYLES
+ */
+.mobile-post-outer {
+  margin-bottom: 1em; }
+
+.mobile-index-title {
+  margin: 10px 0; }
+
 /* ============= Responsive CSS ============= */
 @media only screen and (min-width: 240px) and (max-width: 768px) {
   /* Theme Backbone */
@@ -1186,10 +1225,7 @@ ul.children li {
 
   /* Footer widget */
   .footerarea {
-    padding: 10px 0px; }
-
-  .entry-title {
-    margin: 10px 0; } }
+    padding: 10px 0px; } }
 @media only screen and (min-width: 240px) and (max-width: 480px) {
   #topmenu ul {
     display: none; }
